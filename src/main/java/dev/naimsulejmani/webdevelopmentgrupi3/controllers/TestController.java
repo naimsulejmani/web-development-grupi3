@@ -14,6 +14,8 @@ public class TestController {
     private int contactCounter = 0;
     private int booksCounter = 0;
     private int timeCounter = 0;
+    private int statsCounter = 0;
+    private int totalCounter = 0;
     private LocalDateTime createdDateTime = LocalDateTime.now();
     @GetMapping("/")
     public String index() {
@@ -61,12 +63,15 @@ public class TestController {
     //stats page
     @GetMapping("/stats")
     public String getStats(Model model) {
-
+        statsCounter++;
         model.addAttribute("indexCounter", indexCounter);
         model.addAttribute("aboutCounter", aboutCounter);
         model.addAttribute("contactCounter", contactCounter);
         model.addAttribute("booksCounter", booksCounter);
         model.addAttribute("timeCounter", timeCounter);
+        model.addAttribute("statsCounter", statsCounter);
+        totalCounter=indexCounter+aboutCounter+booksCounter+timeCounter+contactCounter+statsCounter;
+        model.addAttribute("totalCounter", totalCounter);
         return "stats";
         }
 

@@ -9,6 +9,21 @@
     <p>Year Published: <b th:text="${book.yearPublished}"></b></p>
     <p>Price: <b th:text="${book.price}"></b></p>
 
+    <hr/>
+    <div th:object="${book}">
+        <p>ISBN: <b th:text="*{isbn}"></b></p>
+        <p>Title: <b th:text="*{title}"></b></p>
+        <p>Author: <b th:text="*{author}"></b></p>
+        <p>Year Published: <b th:text="*{yearPublished}"></b></p>
+        <p>Price: <b th:text="*{price}"></b></p>
+    </div>
+
 </div>
 
 <th:block th:insert="~{/shared/_footer.html}"></th:block>
+
+
+
+
+
+

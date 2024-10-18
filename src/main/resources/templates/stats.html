@@ -11,6 +11,8 @@
             <th>Contact</th>
             <th>Books</th>
             <th>Time</th>
+            <th>Stats</th>
+            <th>Total</th>
         </tr>
         </thead>
         <tbody>
@@ -20,6 +22,8 @@
             <td th:text="${contactCounter}"></td>
             <td th:text="${booksCounter}"></td>
             <td th:text="${timeCounter}"></td>
+            <td th:text="${statsCounter}"></td>
+            <td th:text="${indexCounter+aboutCounter+contactCounter+booksCounter+timeCounter+statsCounter}"></td>
         </tr>
         </tbody>
     </table>
