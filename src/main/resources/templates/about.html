@@ -3,6 +3,9 @@
 <div class="container">
     <h3>Welcome to About page</h3>
     <hr/>
+    <p>Message: <b th:text="${message.toUpperCase()}"></b></p>
+    <p>Year: <b th:text="${year}"></b></p>
+    <p>Salary: <b th:text="${salary}"></b></p>
 </div>
 
 <th:block th:insert="~{/shared/_footer.html}"></th:block>

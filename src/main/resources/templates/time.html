@@ -1,0 +1,11 @@
+<th:block th:insert="~{/shared/_header.html}"></th:block>
+
+<div class="container">
+    <h3>Welcome to Home page</h3>
+    <hr/>
+    <p>Current Time: <b th:text="${time}"></b></p>
+    <p>Created Time: <b th:text="${createdDateTime.toString()}"></b></p>
+
+</div>
+
+<th:block th:insert="~{/shared/_footer.html}"></th:block>
